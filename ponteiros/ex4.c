@@ -4,6 +4,7 @@
 // tera o valor de A.
 
 #include <stdio.h>
+#include <stdlib.h>
 
 void troca(int *A, int *B);
 
@@ -11,9 +12,7 @@ void main(){
 
 
     int v1;
-    int v2;R
-
-
+    int v2;
 
     scanf("%d", &v1);
     scanf("%d", &v2);
@@ -34,7 +33,7 @@ void main(){
 
 void troca(int *A, int *B){ //recebe endereços A e B
    
-    int aux = *A; // aux recebe o valor apontado por A
+    int aux = *A; // aux recebe o valor apontado por A, aux não é um ponteiro recebe inteiro; 
     *A = *B; // valor apontado por A recebe o valor apontado por B
     *B = aux;
 }
