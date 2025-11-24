@@ -5,10 +5,28 @@
 // Exibir os valores ordenados na tela.
 
 #include <stdio.h>
-
+void ordena(int *n1, int *n2, int *n3);
 int main(){
 
-    
+    int a = 5;
+    int b = 7;
+    int c = 98;
+
+
+
 
     return 0;
+}
+
+
+void ordena(int *n1, int *n2, int *n3){
+
+    int aux;
+    if(*n1 > *n2){
+
+        
+
+    }
+
+
 }
