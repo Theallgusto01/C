@@ -10,8 +10,8 @@ typedef struct no{
 }linked_list;
 
 void insert(linked_list * cabeca, int valor);
-
-
+void insert_ini(linked_list ** head, int valor);
+void imprimir_lista(linked_list * a1);
 
 int main(){
 
@@ -32,6 +32,8 @@ int main(){
 
 
     insert_ini(&l1, 22);
+
+    imprimir_lista(l1);
 
     
     return 0;
@@ -63,4 +65,14 @@ void insert_ini(linked_list ** head, int valor){ // Recebe um ponteiro que apont
     novo_no->prox = *head; // l1
     *head = novo_no;
 
+}
+
+void imprimir_lista(linked_list * a1){
+
+    while (a1 != NULL)
+    {   
+        printf("%d - ", a1->valor);
+        a1 = a1->prox;
+    }
+    printf("\n");
 }
