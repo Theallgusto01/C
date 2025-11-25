@@ -5,28 +5,48 @@
 // Exibir os valores ordenados na tela.
 
 #include <stdio.h>
-void ordena(int *n1, int *n2, int *n3);
+int ordena(int *n1, int *n2, int *n3);
+
 int main(){
 
-    int a = 5;
-    int b = 7;
-    int c = 98;
+    int a = 3;
+    int b = 1;
+    int c = 2;
 
-
-
-
+    printf("a = %d, b = %d, c = %d\n", a, b, c);
+    if(ordena(&a,&b,&c) == 1){
+        printf("São todos iguais :P\n");
+    }else{
+        printf("a = %d, b = %d, c = %d\n", a, b, c);
+    }
+    
     return 0;
 }
 
 
-void ordena(int *n1, int *n2, int *n3){
+int ordena(int *n1, int *n2, int *n3){
+
+    if(*n1 == *n2 && *n2 == *n3){
+        return 1;
+    }
 
     int aux;
     if(*n1 > *n2){
-
-        
-
+        aux = *n1;
+        *n1 = *n2;
+        *n2 = aux;
     }
+    if(*n1 > *n3){
+        aux = *n1;
+        *n1 = *n3;
+        *n3 = aux;
+    }
+    if(*n2 > *n3){
+        aux = *n2;
+        *n2 = *n3;
+        *n3 = aux;
+    }
+    
 
-
+    return 0;
 }
